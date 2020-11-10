@@ -8,6 +8,16 @@
     <link href="css/main.css" rel="stylesheet" />
   </head>
   <body>
+    <script> 
+      if('geolocation' in navigator){
+          navigator.geolocation.getCurrentPosition(function(position) {
+              console.log(position);
+          });
+      } else {
+          console.log('Geolocation is not available');
+      }
+    </script>
+
     <div class="s01" style="background-image: url('images/covid-19-rapid-test.jpg');">
       <form id="searches">
         <div class="inner-form">
@@ -23,7 +33,7 @@
         </div>
       </form>
     </div>
-    
+
     <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase.js"></script>
   
