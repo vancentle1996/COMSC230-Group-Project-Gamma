@@ -36,44 +36,44 @@
 			<div class="login100-more" style="background-image: url('images/covid-19-rapid-test.jpg');"></div>
 
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-				<form class="login100-form validate-form">
+				<form id="signUp" class="login100-form validate-form">
 					<span class="login100-form-title p-b-59">
 						Sign Up
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate="Name is required">
 						<span class="label-input100">Full Name</span>
-						<input class="input100" type="text" name="name" placeholder="Name...">
+						<input id="fullname" class="input100" type="text" name="name" placeholder="Name...">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
 						<span class="label-input100">Email</span>
-						<input class="input100" type="text" name="email" placeholder="Email addess...">
+						<input id="email" class="input100" type="text" name="email" placeholder="Email addess...">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Username is required">
 						<span class="label-input100">Username</span>
-						<input class="input100" type="text" name="username" placeholder="Username...">
+						<input id="username" class="input100" type="text" name="username" placeholder="Username...">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
 						<span class="label-input100">Password</span>
-						<input class="input100" type="text" name="pass" placeholder="*************">
+						<input id="password" class="input100" type="text" name="pass" placeholder="*************">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Repeat Password is required">
 						<span class="label-input100">Repeat Password</span>
-						<input class="input100" type="text" name="repeat-pass" placeholder="*************">
+						<input id="repassword" class="input100" type="text" name="repeat-pass" placeholder="*************">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="flex-m w-full p-b-33">
 						<div class="contact100-form-checkbox">
-							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+							<input id="checkbox" class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
 							<label class="label-checkbox100" for="ckb1">
 								<span class="txt1">
 									I agree to the
@@ -90,9 +90,7 @@
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<a href="C:/Users/Josh/Documents/GitHub/RWU/Comsc230/Assignments/COMSC230-Group-Project-Gamma/Search-page.html/search.html" class="login100-form-btn">
-								Sign Up
-							</a>
+							<button type="submit" class="login100-form-btn">Sign Up</button>
 						</div>
 
 						<a href="C:\Users\Josh\Documents\GitHub\RWU\Comsc230\Assignments\COMSC230-Group-Project-Gamma\Sign-In\Sign-In\signin-page.html" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
@@ -121,6 +119,11 @@
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase.js"></script>
+
+	<script src="app.js"></script>
 
 </body>
 </html>
