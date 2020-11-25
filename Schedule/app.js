@@ -12,20 +12,26 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 //Reference collections
-var signInRef = firebase.database().ref("searched_locations");
+var signInRef = firebase.database().ref("patient_info");
 
-document.getElementById("searches").addEventListener("submit", search);
+document.getElementById("schedule-info").addEventListener("submit", schedule);
 
 //Submit form
-function search(e){
+function schedule(e){
     e.preventDefault();
 
     //Get Values
+    var fullname = getInputVal("fullname");
     var address = getInputVal("address");
-    var zipcode = getInputVal("zipcode");
+    var city = getInputVal("city");
+    var zip = getInputVal("zip");
+    var phone = getInputVal("phone");
+    var date = "December 10, 2020";
 
     //Save sign-in info
-    save(address, zipcode);
+    save(fullname, address, city, zip, phone, date);
+
+    alert("Your Appointment is Successfully Booked. Thanks for using the app!");
 }
 
 function getInputVal(id){
@@ -33,10 +39,14 @@ function getInputVal(id){
 }
 
 //Save data to firebase
-function save(address, zipcode){
+function save(fullname, address, city, zip, phone, date){
     var newUsrRef = signInRef.push();
     newUsrRef.set({
-        Address: address,
-        Zip_code: zipcode
+        Full_Name: fullname,
+        Address: address, 
+        City: city,
+        Zip: zip,
+        Phone: phone,
+        Appointment_Date: date
     });
 }

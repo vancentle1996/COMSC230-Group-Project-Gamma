@@ -74,12 +74,15 @@ body {font-family: Verdana, sans-serif;}
     position: center;
     margin-top: 100px;
     text-align: center;
-    margin-left: 900px;
     width: 5cm;
     height: 1cm;
-    font-size: 30px;
-    background-color: rgb(3, 177, 230);
-    color: black;
+    font-size: 20px;
+    background-color: rgb(37, 75, 87);
+    color: rgb(250, 250, 250);
+}
+
+.schedule-form {
+    margin-top: 10px;
 }
 
 /* Add media queries for smaller screens */
@@ -155,6 +158,34 @@ body {font-family: Verdana, sans-serif;}
   <li>30</li>
   <li>31</li>
 </ul>
-    <button class="schedule">Schedule</button>
+<form id="schedule-info" class="schedule-form">
+
+    <h2>Patient Information</h2>
+    <h5>Please Pick A Date and Fill Out All Fields Below To Schedule An Appointment</h5>
+
+    <label for="fullname">Full Name: </label>
+    <input class="input100" type="text" id="fullname" name="fullname" placeholder="">
+    
+    <label for="address">Address: </label>
+    <input class="input101" type="text" id="address" name="address" placeholder="">
+
+    <label for="city">City: </label>
+    <input class="input101" type="text" id="city" name="city" placeholder="">
+
+    <label for="zip">Zip Code: </label>
+    <input class="input102" type="number" id="zip" name="zip" placeholder="">
+
+    <label for="phone">Phone Number: </label>
+    <input class="input103" type="number" id="phone" name="phone" placeholder="">
+
+    <button type="submit" class="schedule">Schedule</button>
+
+</form>
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase.js"></script>
+    
+    <script src="app.js"></script>
+
 </body>
 </html>
